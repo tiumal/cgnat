@@ -67,8 +67,8 @@ if(file_exists($CGNAT_OUTPUT)){
 $output_rules = array();
 $output_jumps = array();
 $x = $y = 1;
-if(isset($options['m'])) {
-    $output_rules[] = "/ip firewall nat";
+if(isset($options['i'])) {
+    $output_rules[] = "#!/bin/bash";
 }
 for($i=0;$i<=($CGNAT_END-$CGNAT_START);++$i){
     $ip = long2ip($CGNAT_START+$i);
